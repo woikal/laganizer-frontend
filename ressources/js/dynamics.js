@@ -1,12 +1,15 @@
+// on page load
 $(document).ready(function () {
-    $(window).scroll(function () {
-// sticky alternate  navigation
-        var id = $("#altnavwrapper");
-        var winPos = $(window).scrollTop();
-        if (winPos >= 200) {
-            id.addClass("show");
-        } else {
-            id.removeClass("show");
+    $(window).scroll(
+        // sticky navigation
+        function () {
+            var navbar = $("#navbar");
+            var winPos = $(window).scrollTop();
+            if (winPos > 32) {
+                navbar.addClass("fixed");
+            } else {
+                navbar.removeClass("fixed");
+            }
         }
-    });
+    );
 });

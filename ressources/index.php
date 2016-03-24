@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html>
 <head>
     <title>Spring Boot and Thymeleaf example</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
@@ -8,12 +8,13 @@
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/dynamics.js"></script>
 </head>
-<body ng-app="">
-
-<div id="topbar" class="">&nbsp;</div>
-<nav id="navbar" class="">&nbsp;</nav>
-<div id="bannerbar" class="">&nbsp;</div>
-<div id="mainblock" class="wrapper">
+<body>
+<header>
+    <div id="topbar" class="">&nbsp;</div>
+    <nav id="navbar" class="">&nbsp;</nav>
+    <div id="bannerbar" class="">&nbsp;</div>
+</header>
+<main class="wrapper">
     <div id="content" class="">
         <hr>
         <?php include 'lorem_ipsum.txt'; ?>
@@ -21,19 +22,19 @@
     </div>
     <aside id="sidebar" class="placeholder">
         <div id="devlinks">
-            <a href="/saml/index.html">SAML</a>
-            <a href="/steam/index.html">Steam</a>
-            <a href="/google/index.html">Google</a>
-            <a href="/logout">Logout</a>
-            <p text="profile">No Profile</p>
-            <p text="user">No User</p>
+            <!-- <a href="/saml/index.html">SAML</a>
+             <a href="/steam/index.html">Steam</a>
+             <a href="/google/index.html">Google</a>
+             <a href="/logout">Logout</a> -->
+            <p>No Profile</p>
+            <p>No User</p>
         </div>
-        <hs3>Spring Boot and Thymeleaf</hs3>
+        <h3>Spring Boot and Thymeleaf</h3>
         <p>Hello World!</p>
     </aside>
     <div class="clearfix"></div>
-</div>
-<div id="footerbar">
+</main>
+<footer>
     <div class="wrapper">
         <div>1</div>
         <div>2</div>
@@ -41,7 +42,7 @@
         <div>4</div>
     </div>
     <div id="copyright" class="cleafix">©2015 Woike Alexander</div>
-</div>
+</footer>
 <?php // include('templates/footer.html'); ?>
 <?php // include('templates/header.html'); ?>
 <div id="altnavwrapper" class="">

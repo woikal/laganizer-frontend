@@ -6,13 +6,13 @@ $contentWidth: 740px;
 $sidebarWidth: $siteWidth - $spacing - $contentWidth;
 
 $topHeight: 32px;
-$naviHeight: 70px;
+$navHeight: 60px; // 70?
 $bannerHeight: 140px;
 
 $headerHeight: 40px;
 $footerHeight: 100px;
 
-$navHeight: 60px;
+$shadowHeight: 8px;
 
 .wrapper {
   position: relative;
@@ -30,22 +30,49 @@ body {
   background-size: 1400px;
 }
 
+header {
+  position: relative;
+}
+
 #topbar {
   position: relative;
   height: $topHeight;
-
   background-color: rgba(white, 0.3);
 }
 
 #navbar {
-  position: relative;
-  height: $naviHeight;
-  @include linear-gradient(to bottom, $colLight2 0%, $colLight1 25%, $colLight2 100%);
-  @include box-shadow(0 0 10px black);
+  position: absolute;
+  top: $topHeight;
+  z-index: 1;
+  width: 100%;
+  height: $navHeight;
+  @include linear-gradient(to bottom, $colLight1 0%, $colLight1 25%, $colLight2 100%);
+
+  &::before, &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: $shadowHeight;
+  }
+  &::before {
+    top: -$shadowHeight;
+    @include linear-gradient(to top, rgba($colShadow, .4), transparent);
+  }
+  &::after {
+    bottom: -$shadowHeight;
+    @include linear-gradient(to bottom, rgba($colShadow, .4), transparent);
+  }
+
+  &.fixed { // jQuery:
+    position: fixed;
+    top: 0;
+  }
 }
 
 #bannerbar {
   position: relative;
+  margin-top: $navHeight;
   width: 100%;
   height: $bannerHeight;
 
@@ -69,7 +96,7 @@ body {
   float: left;
 }
 
-#footerbar {
+footer {
   height: $footerHeight;
   background: $colCyan;
   border-top: 3px solid $colOcher;
@@ -80,7 +107,7 @@ body {
     display: block;
     position: relative;
     top: -3px;
-    height: 16px;
+    height: 2*$shadowHeight;
     width: 100%;
     @include linear-gradient(to bottom, rgba(black, .3), transparent);
   }

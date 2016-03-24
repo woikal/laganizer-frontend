@@ -32,6 +32,10 @@ body {
   background-size: 1400px;
 }
 
+header {
+  position: relative;
+}
+
 #topbar {
   position: relative;
   height: 32px;
@@ -39,21 +43,51 @@ body {
 }
 
 #navbar {
-  position: relative;
-  height: 70px;
-  background: gainsboro;
+  position: absolute;
+  top: 32px;
+  z-index: 1;
+  width: 100%;
+  height: 60px;
+  background: #f0f0f0;
   /* Color fallback */
-  background: -o-linear-gradient(to bottom, gainsboro 0%, #f0f0f0 25%, gainsboro 100%);
+  background: -o-linear-gradient(to bottom, #f0f0f0 0%, #f0f0f0 25%, gainsboro 100%);
   /* For Opera 11.1 to 12.0 */
-  background: -webkit-linear-gradient(top, gainsboro 0%, #f0f0f0 25%, gainsboro 100%);
-  background: linear-gradient(to bottom, gainsboro 0%, #f0f0f0 25%, gainsboro 100%);
-  -webkit-box-shadow: 0 0 10px black;
-  -moz-box-shadow: 0 0 10px black;
-  box-shadow: 0 0 10px black;
+  background: -webkit-linear-gradient(top, #f0f0f0 0%, #f0f0f0 25%, gainsboro 100%);
+  background: linear-gradient(to bottom, #f0f0f0 0%, #f0f0f0 25%, gainsboro 100%);
+}
+#navbar::before, #navbar::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 8px;
+}
+#navbar::before {
+  top: -8px;
+  background: rgba(0, 0, 0, 0.4);
+  /* Color fallback */
+  background: -o-linear-gradient(to top, rgba(0, 0, 0, 0.4), transparent);
+  /* For Opera 11.1 to 12.0 */
+  background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.4), transparent);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.4), transparent);
+}
+#navbar::after {
+  bottom: -8px;
+  background: rgba(0, 0, 0, 0.4);
+  /* Color fallback */
+  background: -o-linear-gradient(to bottom, rgba(0, 0, 0, 0.4), transparent);
+  /* For Opera 11.1 to 12.0 */
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.4), transparent);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), transparent);
+}
+#navbar.fixed {
+  position: fixed;
+  top: 0;
 }
 
 #bannerbar {
   position: relative;
+  margin-top: 60px;
   width: 100%;
   height: 140px;
   background: rgba(255, 255, 255, 0.5);
@@ -76,13 +110,13 @@ body {
   float: left;
 }
 
-#footerbar {
+footer {
   height: 100px;
   background: #009cb3;
   border-top: 3px solid #dfc300;
   color: #464646;
 }
-#footerbar::before {
+footer::before {
   content: '';
   display: block;
   position: relative;
@@ -144,7 +178,6 @@ body {
   border-top: 0 none;
   -webkit-border-radius: 0 0 8px 8px;
   -moz-border-radius: 0 0 8px 8px;
-  -ms-border-radius: 0 0 8px 8px;
   border-radius: 0 0 8px 8px;
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -175,7 +208,6 @@ fieldset {
   border: 2px solid #009cb3;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
-  -ms-border-radius: 6px;
   border-radius: 6px;
   color: #009cb3;
   padding: 1em;
