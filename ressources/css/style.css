@@ -94,6 +94,15 @@ header {
   border-bottom: 1px solid gainsboro;
 }
 
+#logo {
+  position: relative;
+  top: 10px;
+  width: 120px;
+  height: 120px;
+  margin: 0 20px;
+  background: url("../img/logo_lrg.png");
+}
+
 #mainblock {
   padding: 2em 0;
   border-top: 1px solid white;

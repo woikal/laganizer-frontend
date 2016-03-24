@@ -79,6 +79,13 @@ header {
   background: rgba(white, 0.5);
   border-bottom: 1px solid $colLight2;
 }
+#logo {position: relative;
+  top: 10px;
+  width: 120px;
+  height: 120px;
+  margin: 0 20px;
+
+  background: $imgLogo;}
 
 #mainblock {
   padding: 2em 0;

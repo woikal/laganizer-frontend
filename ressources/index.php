@@ -12,7 +12,12 @@
 <header>
     <div id="topbar" class="">&nbsp;</div>
     <nav id="navbar" class="">&nbsp;</nav>
-    <div id="bannerbar" class="">&nbsp;</div>
+    <div id="bannerbar" class="">
+        <div class="wrapper">
+            <div id="logo" class="">&nbsp;</div>
+            &nbsp;</div>
+    </div>
+
 </header>
 <main class="wrapper">
     <div id="content" class="">
