@@ -64,7 +64,7 @@ header {
     @include linear-gradient(to bottom, rgba($colShadow, .4), transparent);
   }
 
-  &.fixed { // jQuery:
+  &.fixed { // jQuery
     position: fixed;
     top: 0;
   }
@@ -75,17 +75,34 @@ header {
   margin-top: $navHeight;
   width: 100%;
   height: $bannerHeight;
+  overflow: hidden;
 
   background: rgba(white, 0.5);
   border-bottom: 1px solid $colLight2;
+
+  padding-top: 10px;
+
 }
-#logo {position: relative;
-  top: 10px;
+
+#logo {
   width: 120px;
   height: 120px;
-  margin: 0 20px;
+  margin: 0 16px;
+  float: left;
 
-  background: $imgLogo;}
+  background: $imgLogo;
+}
+
+#banner {
+  position: relative;
+  top: 15px;
+  width: 530px;
+  height: 90px;
+  margin: 0 16px;
+  float: left;
+
+  background: $imgBanner;
+}
 
 #mainblock {
   padding: 2em 0;

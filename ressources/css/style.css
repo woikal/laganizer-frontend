@@ -90,17 +90,28 @@ header {
   margin-top: 60px;
   width: 100%;
   height: 140px;
+  overflow: hidden;
   background: rgba(255, 255, 255, 0.5);
   border-bottom: 1px solid gainsboro;
+  padding-top: 10px;
 }
 
 #logo {
-  position: relative;
-  top: 10px;
   width: 120px;
   height: 120px;
-  margin: 0 20px;
+  margin: 0 16px;
+  float: left;
   background: url("../img/logo_lrg.png");
+}
+
+#banner {
+  position: relative;
+  top: 15px;
+  width: 530px;
+  height: 90px;
+  margin: 0 16px;
+  float: left;
+  background: url("../img/banner_XXL_lrg.png");
 }
 
 #mainblock {

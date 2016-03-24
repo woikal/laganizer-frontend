@@ -15,7 +15,8 @@
     <div id="bannerbar" class="">
         <div class="wrapper">
             <div id="logo" class="">&nbsp;</div>
-            &nbsp;</div>
+            <div id="banner" class="">&nbsp;</div>
+        </div>
     </div>
 
 </header>
