@@ -1,0 +1,139 @@
+/* Overall Layout Definition */
+// Configs:
+$siteWidth: 1140px;
+$spacing: 30px;
+$contentWidth: 740px;
+$sidebarWidth: $siteWidth - $spacing - $contentWidth;
+
+$topHeight: 32px;
+$naviHeight: 70px;
+$bannerHeight: 140px;
+
+$headerHeight: 40px;
+$footerHeight: 100px;
+
+$navHeight: 60px;
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  max-width: $siteWidth;
+  margin: 0 auto;
+}
+
+.clearfix {
+  clear: both;
+}
+
+body {
+  background: $imgBackground center top repeat-y, $colLight1;
+  background-size: 1400px;
+}
+
+#topbar {
+  position: relative;
+  height: $topHeight;
+
+  background-color: rgba(white, 0.3);
+}
+
+#navbar {
+  position: relative;
+  height: $naviHeight;
+  @include linear-gradient(to bottom, $colLight2 0%, $colLight1 25%, $colLight2 100%);
+  @include box-shadow(0 0 10px black);
+}
+
+#bannerbar {
+  position: relative;
+  width: 100%;
+  height: $bannerHeight;
+
+  background: rgba(white, 0.5);
+  border-bottom: 1px solid $colLight2;
+}
+
+#mainblock {
+  padding: 2em 0;
+  border-top: 1px solid white;
+}
+
+#content {
+  width: $contentWidth;
+  float: left;
+  margin-right: $spacing;
+}
+
+#sidebar {
+  width: $sidebarWidth;
+  float: left;
+}
+
+#footerbar {
+  height: $footerHeight;
+  background: $colCyan;
+  border-top: 3px solid $colOcher;
+  color: $colDark1;
+
+  &::before {
+    content: '';
+    display: block;
+    position: relative;
+    top: -3px;
+    height: 16px;
+    width: 100%;
+    @include linear-gradient(to bottom, rgba(black, .3), transparent);
+  }
+}
+
+/* Navigation bar */
+#xxx_navbar {
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+
+    li {
+      height: 100%;
+      display: inline-block;
+      float: left;
+      margin: -1px;
+      padding: 0 1em;
+      border-width: 0 1px;
+      border-style: solid;
+      border-color: rgb(0, 50, 70);
+      list-style: none;
+    }
+  }
+}
+
+#userbar {
+  position: absolute;
+  right: 0;
+}
+
+#altnavwrapper {
+  display: block;
+  position: fixed;
+  top: -100px;
+  width: 100%;
+  transition: top 0.7s;
+  &.show {
+    top: 0;
+  }
+}
+
+#altnav {
+  height: 50px;
+  margin: 0 auto;
+  background: $colCyan;
+  border: 3px solid $colOcher;
+  border-top: 0 none;
+
+  @include rounded-border(0 0 8px 8px);
+  @include box-shadow(0 0 10px rgba(black, 0.3));
+}
