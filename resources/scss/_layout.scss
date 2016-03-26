@@ -1,0 +1,198 @@
+@import 'colors';
+
+/* Overall Layout Definition */
+// Configs:
+$siteWidth: 1140px;
+$spacing: 30px;
+$contentWidth: 740px;
+$sidebarWidth: $siteWidth - $spacing - $contentWidth;
+
+$topHeight: 32px;
+$navHeight: 60px; // 70?
+$bannerHeight: 140px;
+
+$headerHeight: 40px;
+$footerHeight: 100px;
+
+$shadowHeight: 8px;
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  max-width: $siteWidth;
+  margin: 0 auto;
+}
+
+.clearfix {
+  clear: both;
+}
+
+body {
+  background: $imgBackground center top repeat-y, $colLight1;
+  background-size: 1400px;
+}
+
+header {
+  position: relative;
+}
+
+#topbar {
+  position: relative;
+  height: $topHeight;
+  background-color: rgba(white, 0.3);
+}
+
+#navbar {
+  position: absolute;
+  top: $topHeight;
+  z-index: 1;
+  width: 100%;
+  height: $navHeight;
+  @include linear-gradient(to bottom, $colLight1 0%, $colLight1 25%, $colLight2 100%);
+
+  &::before, &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: $shadowHeight;
+  }
+  &::before {
+    top: -$shadowHeight;
+    @include linear-gradient(to top, rgba($colShadow, .4), transparent);
+  }
+  &::after {
+    bottom: -$shadowHeight;
+    @include linear-gradient(to bottom, rgba($colShadow, .4), transparent);
+  }
+
+  &.fixed { // jQuery
+    position: fixed;
+    top: 0;
+  }
+}
+
+#bannerbar {
+  position: relative;
+  margin-top: $navHeight;
+  width: 100%;
+  height: $bannerHeight;
+  overflow: hidden;
+
+  background: rgba(white, 0.5);
+  border-bottom: 1px solid $colLight2;
+
+  padding-top: 10px;
+
+}
+
+#logo {
+  width: 120px;
+  height: 120px;
+  margin: 0 16px;
+  float: left;
+
+  background: $imgLogo;
+}
+
+#banner {
+  position: relative;
+  top: 15px;
+  width: 530px;
+  height: 90px;
+  margin: 0 16px;
+  float: left;
+
+  background: $imgBanner;
+}
+
+#mainblock {
+  padding: 2em 0;
+  border-top: 1px solid white;
+}
+
+#content {
+  width: $contentWidth;
+  float: left;
+  margin-right: $spacing;
+}
+
+#sidebar {
+  width: $sidebarWidth;
+  float: left;
+}
+
+footer {
+  height: $footerHeight;
+  background: $colCyan;
+  border-top: 3px solid $colOcher;
+  color: $colDark1;
+
+  &::before {
+    content: '';
+    display: block;
+    position: relative;
+    top: -3px;
+    height: 2*$shadowHeight;
+    width: 100%;
+    @include linear-gradient(to bottom, rgba(black, .3), transparent);
+  }
+}
+
+/* Navigation bar */
+#xxx_navbar {
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+
+    li {
+      height: 100%;
+      display: inline-block;
+      float: left;
+      margin: -1px;
+      padding: 0 1em;
+      border-width: 0 1px;
+      border-style: solid;
+      border-color: rgb(0, 50, 70);
+      list-style: none;
+    }
+  }
+}
+
+#userbar {
+  position: absolute;
+  right: 0;
+}
+
+#notification {
+  display: block;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+
+  transition: top 0.7s;
+  &.notify {
+    top: 0;
+  }
+  & > div {
+    padding: .5em 2em;
+    background: rgba($colCyan, .8);
+    border: 3px solid $colOcher;
+    border-top: 0 none;
+    @include rounded-border(0 0 8px 8px);
+    @include box-shadow(0 0 10px rgba(black, 0.3));
+
+    p {
+      text-align: center;
+      color: $colNotificationText;
+      font-weight: bold;
+    }
+  }
+
+}

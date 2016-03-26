@@ -51,9 +51,7 @@
 </footer>
 <?php // include('templates/footer.html'); ?>
 <?php // include('templates/header.html'); ?>
-<div id="altnavwrapper" class="">
-    <nav id="altnav" class="wrapper">
-    </nav>
+<div id="notification" class=""><div class="wrapper"><p>Notfication 1</p><p>Notfication 2</p></div>
 </div>
 
 </body>
