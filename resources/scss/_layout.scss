@@ -36,10 +36,16 @@ header {
   position: relative;
 }
 
-#topbar {
+#authbar {
   position: relative;
   height: $topHeight;
   background-color: rgba(white, 0.3);
+  & > p {
+    padding: .4em 1em;
+    text-align: right;
+    font-size: .8em;
+    font-weight: bold;
+  }
 }
 
 #navbar {

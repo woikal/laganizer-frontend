@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Spring Boot and Thymeleaf example</title>
+    <title>LAGanizer - Frontend Design Draft</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
@@ -10,7 +10,8 @@
 </head>
 <body>
 <header>
-    <div id="topbar" class="">&nbsp;</div>
+    <div id="authbar" class=""><p class="wrapper">Logged in as <a href="/profile" class="user">Test User</a>.
+            Click to <a href="/logout" class=logout">Logout</a></p></div>
     <nav id="navbar" class="">&nbsp;</nav>
     <div id="bannerbar" class="">
         <div class="wrapper">
@@ -51,7 +52,9 @@
 </footer>
 <?php // include('templates/footer.html'); ?>
 <?php // include('templates/header.html'); ?>
-<div id="notification" class=""><div class="wrapper"><p>Notfication 1</p><p>Notfication 2</p></div>
+<div id="notification" class="">
+    <div class="wrapper"><p>Notfication 1</p>
+        <p>Notfication 2</p></div>
 </div>
 
 </body>
