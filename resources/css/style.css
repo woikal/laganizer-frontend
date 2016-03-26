@@ -1,0 +1,215 @@
+/* Reset browser defaults */
+html, body, div {
+  border: 0 none;
+  margin: 0;
+  padding: 0; }
+
+/* Defaults */
+* {
+  box-sizing: border-box; }
+
+body {
+  color: #464646;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+/* Overall Layout Definition */
+.wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto; }
+
+.clearfix {
+  clear: both; }
+
+body {
+  background: url("../img/mainbackground.png") center top repeat-y, #f0f0f0;
+  background-size: 1400px; }
+
+header {
+  position: relative; }
+
+#topbar {
+  position: relative;
+  height: 32px;
+  background-color: rgba(255, 255, 255, 0.3); }
+
+#navbar {
+  position: absolute;
+  top: 32px;
+  z-index: 1;
+  width: 100%;
+  height: 60px;
+  background: #f0f0f0;
+  /* Color fallback */
+  background: -o-linear-gradient(to bottom, #f0f0f0 0%, #f0f0f0 25%, gainsboro 100%);
+  /* For Opera 11.1 to 12.0 */
+  background: -webkit-linear-gradient(top, #f0f0f0 0%, #f0f0f0 25%, gainsboro 100%);
+  background: linear-gradient(to bottom, #f0f0f0 0%, #f0f0f0 25%, gainsboro 100%); }
+  #navbar::before, #navbar::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 8px; }
+  #navbar::before {
+    top: -8px;
+    background: rgba(0, 0, 0, 0.4);
+    /* Color fallback */
+    background: -o-linear-gradient(to top, rgba(0, 0, 0, 0.4), transparent);
+    /* For Opera 11.1 to 12.0 */
+    background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.4), transparent);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.4), transparent); }
+  #navbar::after {
+    bottom: -8px;
+    background: rgba(0, 0, 0, 0.4);
+    /* Color fallback */
+    background: -o-linear-gradient(to bottom, rgba(0, 0, 0, 0.4), transparent);
+    /* For Opera 11.1 to 12.0 */
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.4), transparent);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), transparent); }
+  #navbar.fixed {
+    position: fixed;
+    top: 0; }
+
+#bannerbar {
+  position: relative;
+  margin-top: 60px;
+  width: 100%;
+  height: 140px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid gainsboro;
+  padding-top: 10px; }
+
+#logo {
+  width: 120px;
+  height: 120px;
+  margin: 0 16px;
+  float: left;
+  background: url("../img/logo_lrg.png"); }
+
+#banner {
+  position: relative;
+  top: 15px;
+  width: 530px;
+  height: 90px;
+  margin: 0 16px;
+  float: left;
+  background: url("../img/banner_XXL_lrg.png"); }
+
+#mainblock {
+  padding: 2em 0;
+  border-top: 1px solid white; }
+
+#content {
+  width: 740px;
+  float: left;
+  margin-right: 30px; }
+
+#sidebar {
+  width: 370px;
+  float: left; }
+
+footer {
+  height: 100px;
+  background: #009cb3;
+  border-top: 3px solid #dfc300;
+  color: #464646; }
+  footer::before {
+    content: '';
+    display: block;
+    position: relative;
+    top: -3px;
+    height: 16px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    /* Color fallback */
+    background: -o-linear-gradient(to bottom, rgba(0, 0, 0, 0.3), transparent);
+    /* For Opera 11.1 to 12.0 */
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.3), transparent);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), transparent); }
+
+/* Navigation bar */
+#xxx_navbar {
+  position: absolute;
+  left: 0;
+  font-weight: bold; }
+  #xxx_navbar ul {
+    margin: 0;
+    padding: 0;
+    height: 100%; }
+    #xxx_navbar ul li {
+      height: 100%;
+      display: inline-block;
+      float: left;
+      margin: -1px;
+      padding: 0 1em;
+      border-width: 0 1px;
+      border-style: solid;
+      border-color: #003246;
+      list-style: none; }
+
+#userbar {
+  position: absolute;
+  right: 0; }
+
+#notification {
+  display: block;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  transition: top 0.7s; }
+  #notification.notify {
+    top: 0; }
+  #notification > div {
+    padding: .5em 2em;
+    background: rgba(0, 156, 179, 0.8);
+    border: 3px solid #dfc300;
+    border-top: 0 none;
+    -webkit-border-radius: 0 0 8px 8px;
+    -moz-border-radius: 0 0 8px 8px;
+    border-radius: 0 0 8px 8px;
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); }
+    #notification > div p {
+      text-align: center;
+      color: gainsboro;
+      font-weight: bold; }
+
+/* Overrides for development purposes */
+#notification {
+  display: none !important; }
+
+#xxx_content {
+  background: gainsboro;
+  margin-top: 40px;
+  padding: 2em; }
+
+/* Forms */
+#authform {
+  margin: 1.2em;
+  padding: .6em .2em .2em;
+  background: #f0f0f0; }
+
+hr {
+  width: 96%;
+  border-width: 1px 0;
+  border-style: solid;
+  border-color: #6a6a6a transparent white; }
+
+fieldset {
+  border: 2px solid #009cb3;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  color: #009cb3;
+  padding: 1em; }
+
+.placeholder {
+  background: #f0f0f0;
+  border: 1px solid #1e1e1e; }
+
+/*# sourceMappingURL=style.css.map */
