@@ -84,7 +84,7 @@ header {
       display: inline-block;
       height: 60px;
       margin: 0;
-      border-left: 1px solid transparent;
+      border-left: 1px none transparent;
       border-right: 1px solid gainsboro;
       padding: 0 18px;
       line-height: 60px;
@@ -100,10 +100,11 @@ header {
         z-index: 1;
         background: #009cb3;
         /* Color fallback */
-        background: -o-linear-gradient(to right, #009cb3 10%, transparent 100%);
+        background: -o-linear-gradient(to right, #009cb3 5%, rgba(0, 156, 179, 0.6) 80%, transparent 100%);
         /* For Opera 11.1 to 12.0 */
-        background: -webkit-linear-gradient(left, #009cb3 10%, transparent 100%);
-        background: linear-gradient(to right, #009cb3 10%, transparent 100%);
+        background: -webkit-linear-gradient(left, #009cb3 5%, rgba(0, 156, 179, 0.6) 80%, transparent 100%);
+        background: linear-gradient(to right, #009cb3 5%, rgba(0, 156, 179, 0.6) 80%, transparent 100%);
+        border: 0 none transparent;
         border-left: 1px solid #dfc300;
         padding: 0 1em;
         list-style: none;
@@ -116,8 +117,8 @@ header {
         background: -webkit-linear-gradient(top, rgba(0, 156, 179, 0.7) 0%, rgba(0, 156, 179, 0.5) 25%, rgba(0, 156, 179, 0.7) 100%);
         background: linear-gradient(to bottom, rgba(0, 156, 179, 0.7) 0%, rgba(0, 156, 179, 0.5) 25%, rgba(0, 156, 179, 0.7) 100%);
         border-color: #dfc300;
-        color: gainsboro;
-        text-shadow: 0 0 5px rgba(70, 70, 70, 0.8); }
+        color: #e6e6e6;
+        text-shadow: 0 0 5px rgba(70, 70, 70, 0.9); }
         #navbar > ul > li:hover > ul {
           visibility: visible;
           /* shows sub-menu */
@@ -182,26 +183,6 @@ footer {
     /* For Opera 11.1 to 12.0 */
     background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.3), transparent);
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), transparent); }
-
-/* Navigation bar */
-#xxx_navbar {
-  position: absolute;
-  left: 0;
-  font-weight: bold; }
-  #xxx_navbar ul {
-    margin: 0;
-    padding: 0;
-    height: 100%; }
-    #xxx_navbar ul li {
-      height: 100%;
-      display: inline-block;
-      float: left;
-      margin: -1px;
-      padding: 0 1em;
-      border-width: 0 1px;
-      border-style: solid;
-      border-color: #003246;
-      list-style: none; }
 
 #notification {
   display: block;
