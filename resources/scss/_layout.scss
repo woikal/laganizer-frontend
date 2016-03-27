@@ -80,15 +80,17 @@ header {
   & > ul {
     padding: 0;
     & > li:first-child {
-      border-left: 1px solid $colLight2;
+      border-left-color: $colLight2;
     }
     & > li {
       display: inline-block;
       height: $navHeight;
       margin: 0;
 
-      border-left: 1px none transparent;
-      border-right: 1px solid $colLight2;
+      border-width: 0 1px;
+      border-style: none solid;
+      border-color: transparent;
+      border-right-color: $colLight2;
 
       padding: 0 18px;
       line-height: $navHeight;

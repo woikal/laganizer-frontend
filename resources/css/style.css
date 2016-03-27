@@ -79,13 +79,15 @@ header {
   #navbar > ul {
     padding: 0; }
     #navbar > ul > li:first-child {
-      border-left: 1px solid gainsboro; }
+      border-left-color: gainsboro; }
     #navbar > ul > li {
       display: inline-block;
       height: 60px;
       margin: 0;
-      border-left: 1px none transparent;
-      border-right: 1px solid gainsboro;
+      border-width: 0 1px;
+      border-style: none solid;
+      border-color: transparent;
+      border-right-color: gainsboro;
       padding: 0 18px;
       line-height: 60px;
       color: #464646;
