@@ -44,14 +44,33 @@
 </main>
 <footer>
     <div class="wrapper">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
+
+        <ul class="sitemap">
+            <li>Sitemap Item</li>
+            <li>Sitemap Item</li>
+            <li>Sitemap Item</li>
+            <li>Sitemap Item</li>
+        </ul>
+
+        <ul class="sitemap">
+            <li>Sitemap Item</li>
+            <li>Sitemap Item</li>
+            <li>Sitemap Item</li>
+        </ul>
+        <ul class="sitemap">
+            <li>Sitemap Item</li>
+            <li>Sitemap Item</li>
+            <li>Sitemap Item</li>
+            <li>Sitemap Item</li>
+        </ul>
+        <ul class="sitemap">
+            <li>Sitemap Item</li>
+            <li>Sitemap Item</li>
+        </ul>
+        <div class="clearfix"></div>
     </div>
-    <div id="copyright" class="cleafix">©2015 Woike Alexander</div>
 </footer>
-<?php // include('templates/header.html'); ?>
+<p class="copyright">© 2016 Woike Alexander</p>
 <div id="notification" class="">
     <div class="wrapper"><p>Notfication 1</p>
         <p>Notfication 2</p></div>
