@@ -90,7 +90,7 @@ header {
 
       border: 0 none transparent;
       border-right: 1px solid $colLight2;
-      border-left: 1px solid;
+      border-left: 1px solid rgba($colLight1, .01);
 
       padding: 0 18px;
       line-height: $navHeight;
