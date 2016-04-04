@@ -7,7 +7,30 @@
 <main class="wrapper">
     <div id="content" class="">
         <hr>
-        <?php include 'lorem_ipsum.txt'; ?>
+        <ul class="newsfeed">
+            <li class="newsitem clearfix">
+                <article class="">
+                    <img src="img/articleImg.png"/>
+                    <h2><a href="article.php">Box Title</a></h2>
+                    <p>Box Text oadjfkn idajf adfhfadifhh a fdhf hiuahfh iafhdhafhhui </p></article>
+                <hr/>
+            </li>
+            <li class="newsitem clearfix">
+                <article class="">
+                    <img src="img/articleImg.png"/>
+                    <h2><a href="article.php">Box Title</a></h2>
+                    <p>Box Text oadjfkn idajf adfhfadifhh a fdhf hiuahfh iafhdhafhhui </p></article>
+                <hr/>
+            </li>
+            <li class="newsitem clearfix">
+                <article class="">
+                    <img src="img/articleImg.png"/>
+                    <h2><a href="article.php">Box Title</a></h2>
+                    <p>Box Text oadjfkn idajf adfhfadifhh a fdhf hiuahfh iafhdhafhhui </p></article>
+                <hr/>
+            </li>
+        </ul>
+        <?php //include 'lorem_ipsum.txt'; ?>
 
     </div>
     <?php include('templates/sidebar.php'); ?>

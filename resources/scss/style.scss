@@ -4,35 +4,4 @@
 @import 'layout';
 @import 'dev_overrides';
 
-#xxx_content {
-  background: $colLight2;
-  margin-top: $headerHeight;
-  padding: 2em;
-}
 
-/* Forms */
-#authform {
-  margin: 1.2em;
-  padding: .6em .2em .2em;
-  background: $colLight1;
-}
-
-hr {
-  width: 96%;
-  border-width: 1px 0;
-  border-style: solid;
-  border-color: $colMedium2 transparent white;
-}
-
-fieldset {
-  border: 2px solid $colCyan;
-  @include rounded-border(6px);
-  color: $colCyan;
-
-  padding: 1em;
-}
-
-.placeholder {
-  background: $colLight1;
-  border: 1px solid $colDark2;
-}

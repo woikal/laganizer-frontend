@@ -16,7 +16,6 @@
         <ul class="sitemap">
             <li>Sitemap Item</li>
             <li>Sitemap Item</li>
-            h
             <li>Sitemap Item</li>
             <li>Sitemap Item</li>
         </ul>
@@ -32,5 +31,5 @@
     <div class="wrapper"><p>Notfication 1</p>
         <p>Notfication 2</p></div>
 </div>
-<div id="movetop" class="">^</div>
+<div id="scrollTop" class="noselect">Scroll Up</div>
 <div id="help" class="">help</div>
