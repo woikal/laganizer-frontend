@@ -32,3 +32,5 @@
     <div class="wrapper"><p>Notfication 1</p>
         <p>Notfication 2</p></div>
 </div>
+<div id="movetop" class="">^</div>
+<div id="help" class="">help</div>
