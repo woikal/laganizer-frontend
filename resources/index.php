@@ -1,80 +1,19 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>LAGanizer - Frontend Design Draft</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-
-    <link rel="stylesheet" type="text/css" href="css/style.css"/>
-    <script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript" src="js/dynamics.js"></script>
-</head>
+<?php include('templates/head.php'); ?>
 <body>
-<header>
-    <div id="authbar" class=""><p class="wrapper">Logged in as <a href="/profile" class="user">Test User</a>.
-            Click to <a href="/logout" class=logout">Logout</a></p></div>
-    <nav id="navbar" class="">
-        <?php include('templates/navbar.php'); ?></nav>
-    <div id="bannerbar" class="">
-        <div class="wrapper">
-            <div id="logo" class="">&nbsp;</div>
-            <div id="banner" class="">&nbsp;</div>
-        </div>
-    </div>
 
-</header>
+<?php include('templates/header.php'); ?>
 <main class="wrapper">
     <div id="content" class="">
         <hr>
         <?php include 'lorem_ipsum.txt'; ?>
 
     </div>
-    <aside id="sidebar" class="placeholder">
-        <div id="devlinks">
-            <!-- <a href="/saml/index.html">SAML</a>
-             <a href="/steam/index.html">Steam</a>
-             <a href="/google/index.html">Google</a>
-             <a href="/logout">Logout</a> -->
-            <p>No Profile</p>
-            <p>No User</p>
-        </div>
-        <h3>Spring Boot and Thymeleaf</h3>
-        <p>Hello World!</p>
-    </aside>
+    <?php include('templates/sidebar.php'); ?>
     <div class="clearfix"></div>
 </main>
-<footer>
-    <div class="wrapper">
-
-        <ul class="sitemap">
-            <li>Sitemap Item</li>
-            <li>Sitemap Item</li>
-            <li>Sitemap Item</li>
-            <li>Sitemap Item</li>
-        </ul>
-
-        <ul class="sitemap">
-            <li>Sitemap Item</li>
-            <li>Sitemap Item</li>
-            <li>Sitemap Item</li>
-        </ul>
-        <ul class="sitemap">
-            <li>Sitemap Item</li>
-            <li>Sitemap Item</li>
-            <li>Sitemap Item</li>
-            <li>Sitemap Item</li>
-        </ul>
-        <ul class="sitemap">
-            <li>Sitemap Item</li>
-            <li>Sitemap Item</li>
-        </ul>
-        <div class="clearfix"></div>
-    </div>
-</footer>
-<p class="copyright">© 2016 Woike Alexander</p>
-<div id="notification" class="">
-    <div class="wrapper"><p>Notfication 1</p>
-        <p>Notfication 2</p></div>
-</div>
+<?php include('templates/footer.php'); ?>
 
 </body>
 </html>
