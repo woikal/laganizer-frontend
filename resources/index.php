@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
-<?php include('templates/head.php'); ?>
+<head><?php include('templates/head.php'); ?>
+</head>
 <body>
 
 <?php include('templates/header.php'); ?>
